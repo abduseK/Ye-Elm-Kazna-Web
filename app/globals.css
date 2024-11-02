@@ -4,11 +4,15 @@
 
 .custom-bg {
   background-color: #1f1f1f; /* Dark background color */
-  background-image:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.05) 1px,
+      transparent 1px
+    ),
     linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
   background-size: 20px 20px; /* Adjust the grid size here */
   position: relative;
+  animation: backgroundShift 10s linear infinite; /* Add animation */
 }
 
 .custom-bg::before {
@@ -20,4 +24,13 @@
   bottom: 0;
   background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), transparent);
   z-index: 1;
+}
+
+@keyframes backgroundShift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
 }
