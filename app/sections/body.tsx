@@ -10,7 +10,7 @@ export default function Body() {
       <h1 className="text-center text-5xl text-white">
         የትኛውም ጉዳይ ላይ ያሎትን ጥያቄ ወይም <br /> ፈትዋ እዚሁ ያግኙ
       </h1>
-      <div className="justify-center mt-5 md:flex md:gap-5">
+      <div className="mt-5 flex flex-col gap-5 md:flex-row md:justify-center md:gap-5">
         <SearchBar />
         <Combobox options={options} />
       </div>

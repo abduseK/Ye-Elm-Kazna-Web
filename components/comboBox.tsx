@@ -10,7 +10,7 @@ const Combobox = ({ options = [] }) => {
   );
 
   return (
-    <div className="relative w-full max-w-xs">
+    <div className="pl-32 sm:pl-0 relative w-full max-w-xs">
       {/* Trigger Button */}
       <button
         className="w-1/2 text-left p-2 border border-gray-700 rounded-lg bg-[#1c1c1e] text-white flex items-center justify-between"
@@ -37,7 +37,7 @@ const Combobox = ({ options = [] }) => {
 
       {/* Dropdown Menu */}
       {isOpen && (
-        <div className="absolute top-14 left-0 w-full bg-[#1c1c1e] border border-gray-700 rounded-lg shadow-lg z-10 p-3">
+        <div className="absolute top-14 left-0 w-2/3 bg-[#1c1c1e] border border-gray-700 rounded-lg shadow-lg z-10 p-3">
           <input
             type="text"
             className="w-full p-2 mb-2 bg-[#1c1c1e] text-white border border-gray-700 rounded focus:outline-none"
@@ -45,7 +45,7 @@ const Combobox = ({ options = [] }) => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <div className="max-h-40 overflow-y-auto">
+          <div className="max-h-40 overflow-y-auto no-scrollbar">
             {filteredOptions.map((option, index) => (
               <button
                 key={index}
