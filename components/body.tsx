@@ -2,14 +2,14 @@ export default function Body() {
   return (
     <div className="mt-24 justify-center">
       <h1 className="text-center text-5xl text-white">
-        የትኛውም ጉዳይ ላይ ያሎትን ጥያቄ ውይም <br /> ፈትዋ እዚሁ ያግኙ
+        የትኛውም ጉዳይ ላይ ያሎትን ጥያቄ ወይም <br /> ፈትዋ እዚሁ ያግኙ
       </h1>
       <div className="mt-8 justify-center text-center flex">
         <div className="relative">
           <input
             type="text"
             placeholder="Search Fatwa..."
-            className="bg-[rgba(255, 255, 255, 0.05)] text-gray-400 placeholder-gray-400 border border-gray-700 rounded-full py-2 px-4 pl-10 w-64 focus:outline-none focus:border-blue-500"
+            className="bg-[#1c1c1e] text-gray-400 placeholder-gray-400 border border-gray-700 rounded-full py-2 px-4 pl-10 w-64 focus:outline-none focus:border-white"
           />
           <svg
             xmlns="http://www.w3.org/2000/svg"
