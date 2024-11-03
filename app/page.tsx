@@ -7,7 +7,7 @@ import Hero from "./sections/hero";
 
 export default function Home() {
   return (
-    <div className="text-white min-h-screen px-14 custom-bg md:px-64">
+    <div className="text-white min-h-screen px-14 custom-bg md:px-64 ">
       <div className="scrollable-content no-scrollbar">
         <NavBar />
         <Body />
