@@ -3,6 +3,7 @@
 import Body from "@/app/sections/body";
 import NavBar from "@/components/nav";
 import Footer from "./sections/footer";
+import Hero from "./sections/hero";
 
 export default function Home() {
   return (
