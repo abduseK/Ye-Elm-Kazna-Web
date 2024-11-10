@@ -1,14 +1,28 @@
+"use client";
+
 import { BsPatchQuestionFill } from "react-icons/bs";
 import { MdSource } from "react-icons/md";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import MainImage from "../public/main.jpg";
 import Image from "next/image";
 
 export default function DetailBody() {
+  const handleBackClick = () => {
+    window.history.back();
+  };
   return (
     <div className=" text-white min-h-screen flex flex-col items-center py-10 px-4">
       <div className="max-w-3xl w-full rounded-lg shadow-lg p-6 mb-6">
+        <button
+          onClick={handleBackClick} // Goes back to the previous page
+          className="text-2xl mb-5"
+          aria-label="Go back"
+        >
+          <IoMdArrowRoundBack />
+        </button>
         <div className="flex flex-col lg:flex-row lg:space-x-6">
           {/* Left: Project Image */}
+
           <div className="lg:w-1/2">
             <Image
               src={MainImage}
