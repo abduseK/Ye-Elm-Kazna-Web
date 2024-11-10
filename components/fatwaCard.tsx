@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FatwaCard() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-12">
       {[1, 2, 3].map((_, index) => (
         <Link
           href="/details"
