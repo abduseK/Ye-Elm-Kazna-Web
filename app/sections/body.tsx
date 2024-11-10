@@ -3,6 +3,8 @@ import FatwaCard from "@/components/fatwaCard";
 import SearchBar from "../../components/searchBar";
 import Combobox from "@/components/comboBox";
 import bodyLogo from "../../public/logo3.png";
+import { useState } from "react";
+import DetailScreen from "../details/page";
 
 export default function Body() {
   const options = ["አቂዳ", "ቢድዐ 1", "ቢድዐ 2", "ሶላት 1", "ሶላት 2", "ጾም", "ዒድ"];
@@ -19,8 +21,6 @@ export default function Body() {
         <SearchBar />
         <Combobox options={options} />
       </div>
-      <FatwaCard />
-      <FatwaCard />
       <FatwaCard />
     </div>
   );

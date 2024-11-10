@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function FatwaCard() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
       {[1, 2, 3].map((_, index) => (
-        <a
-          href="#"
+        <Link
+          href="/details"
           key={index}
           className="relative bg-[#1c1c1e] border border-[#38383a] rounded-xl p-6 shadow-lg transform transition-all duration-300 ease-in-out hover:-translate-x-2 hover:-translate-y-1 hover:border-white hover:shadow-xl"
         >
@@ -13,7 +15,7 @@ export default function FatwaCard() {
             የሱና ፆም እየፆምኩ እያለ ለአሱር ሶላት ውዱእ እያደረኩ በአጋጣሚ ጥርሴን አመመኝና ስነካው ድዴ ደማ ፣
             ታዲያ ይህ ፆሜ ትክክል ነው ወይስ ተበላሽቶብኛል?
           </p>
-        </a>
+        </Link>
       ))}
     </div>
   );
