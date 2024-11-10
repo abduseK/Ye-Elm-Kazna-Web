@@ -33,8 +33,8 @@ export default function DetailBody() {
 
           {/* Right: Project Info */}
           <div className="lg:w-1/2 mt-6 lg:mt-0">
-            <h1 className="text-3xl font-bold mb-2">መውሊድ 1</h1>
-            <p className="text-gray-400 mb-4">በመውሊድ ዙርያ የተሰጠ ፈትዋ</p>
+            <h1 className="text-3xl font-bold mb-2">ነሺዳ</h1>
+            <p className="text-gray-400 mb-4">በቢድዐ ዙርያ የተሰጠ ፈትዋ</p>
 
             <div className="flex items-center space-x-2 mb-4">
               <MdSource className="text-xl" />
@@ -61,7 +61,7 @@ export default function DetailBody() {
       <div className="max-w-3xl w-full bg-[#1c1c1e] rounded-lg shadow-lg p-6">
         <h2 className="text-xl font-semibold mb-4 flex items-center space-x-2">
           <BsPatchQuestionFill />
-          <span>መውሊድ ሀራም መሆኑን እያወቁ የሚከበርበት ቦታ መገኘት እንዴት ይታያል?</span>
+          <span>በዘመናችን የምናያቸው ኢስላማዊ ነሽዳዎች ይፈቀዳሉን? እነዚህን ማዳመጡስ?</span>
         </h2>
         <p className="text-gray-400 mb-4">
           በመጀመሪያ ደረጃ ነሺዳ ብሎ ማለት ከቋንቋ አንፃር ግጥም ማለት ነው።
