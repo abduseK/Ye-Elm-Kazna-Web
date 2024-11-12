@@ -1,6 +1,6 @@
 import NavBar from "@/components/nav";
 import Footer from "../sections/footer";
-import DetailBody from "@/components/detailBody";
+import DetailBody from "@/app/detailBody";
 
 export default function DetailScreen() {
   return (
