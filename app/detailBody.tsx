@@ -3,14 +3,28 @@ import { useState, useEffect } from "react";
 import { BsPatchQuestionFill } from "react-icons/bs";
 import { MdSource } from "react-icons/md";
 import { IoMdArrowRoundBack } from "react-icons/io";
-import MainImage from "../public/main.jpg";
+import MainImage from "../public/detailImages/main.jpg";
 import Image from "next/image";
 import fatwas from "./data/fatwas.json";
 import { SkewLoader } from "react-spinners";
 
+// const images = [
+//   "/../public/detailImages/main.jpg",
+//   "/../public/detailImages/main2.jpg",
+//   "/../public/detailImages/main3.jpeg",
+//   "/../public/detailImages/main4.avif",
+//   "/../public/detailImages/main5.avif",
+//   "/../public/detailImages/main6.jpg",
+//   "/../public/detailImages/main7.jpg",
+//   "/../public/detailImages/main8.jpg",
+// ];
+
 export default function DetailBody() {
   const [fatwa, setFatwa] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  // const randomIndex = Math.floor(Math.random() * images.length);
+  // const selectedImage = images[randomIndex];
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -57,11 +71,7 @@ export default function DetailBody() {
           {/* Left: Project Image */}
 
           <div className="lg:w-1/2">
-            <Image
-              src={MainImage}
-              alt="Food Pick"
-              className="rounded-lg w-full"
-            />
+            <Image src={MainImage} alt="Image" className="rounded-lg w-full" />
           </div>
 
           {/* Right: Project Info */}
