@@ -1,5 +1,5 @@
 "use client";
-
+import { useState, useEffect } from "react";
 import { BsPatchQuestionFill } from "react-icons/bs";
 import { MdSource } from "react-icons/md";
 import { IoMdArrowRoundBack } from "react-icons/io";
@@ -8,13 +8,28 @@ import Image from "next/image";
 import fatwas from "./data/fatwas.json";
 
 export default function DetailBody() {
-  // Get the ID from the URL
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  const id = urlParams.get("id");
+  const [fatwa, setFatwa] = useState(null);
+  const [loading, setLoading] = useState(true);
 
-  // Find the specific item based on ID
-  const fatwa = fatwas.find((entry) => entry.id.toString() === id);
+  useEffect(() => {
+    // Get the ID from the URL
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get("id");
+
+    const foundFatwa = fatwas.find((entry) => entry.id.toString() === id);
+
+    setFatwa(foundFatwa);
+    setLoading(false);
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center min-h-screen">
+        <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 animate-spin"></div>
+      </div>
+    );
+  }
 
   if (!fatwa) {
     return <p>Fatwa Not Found</p>;
