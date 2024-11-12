@@ -6,6 +6,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import MainImage from "../public/main.jpg";
 import Image from "next/image";
 import fatwas from "./data/fatwas.json";
+import { SkewLoader } from "react-spinners";
 
 export default function DetailBody() {
   const [fatwa, setFatwa] = useState(null);
@@ -22,7 +23,7 @@ export default function DetailBody() {
 
       setFatwa(foundFatwa);
       setLoading(false);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -30,7 +31,7 @@ export default function DetailBody() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 animate-spin"></div>
+        <SkewLoader color="#FFFFFF" size={30} />
       </div>
     );
   }
