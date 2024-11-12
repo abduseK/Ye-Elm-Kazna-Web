@@ -12,15 +12,19 @@ export default function DetailBody() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Get the ID from the URL
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const id = urlParams.get("id");
+    const timer = setTimeout(() => {
+      // Get the ID from the URL
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const id = urlParams.get("id");
 
-    const foundFatwa = fatwas.find((entry) => entry.id.toString() === id);
+      const foundFatwa = fatwas.find((entry) => entry.id.toString() === id);
 
-    setFatwa(foundFatwa);
-    setLoading(false);
+      setFatwa(foundFatwa);
+      setLoading(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   if (loading) {
