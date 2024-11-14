@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaArrowDownWideShort } from "react-icons/fa6";
 
 const Combobox = ({ options = [], onSelect }) => {
   const [query, setQuery] = useState("");
@@ -17,28 +18,15 @@ const Combobox = ({ options = [], onSelect }) => {
   };
 
   return (
-    <div className="pl-32 sm:pl-0 relative w-full max-w-xs">
+    <div className="relative w-full justify-center text-center flex max-w-xs">
       <button
-        className="w-1/2 text-left p-2 border border-gray-700 rounded-lg bg-[#1c1c1e] text-white flex items-center justify-between"
+        className="w-2/3 tex-left p-2 border border-gray-700 rounded-lg bg-[#1c1c1e] text-white flex items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="text-gray-400">
-          {selected ? selected : "ፈትዋ ይምረጡ(አቂዳ)"}
+          {selected ? selected : "ፈትዋ ይምረጡ"}
         </span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth={1.5}
-          stroke="currentColor"
-          className="w-5 h-5"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8.25 9.75L12 13.5l3.75-3.75"
-          />
-        </svg>
+        <FaArrowDownWideShort className="text-gray-400" />
       </button>
 
       {isOpen && (

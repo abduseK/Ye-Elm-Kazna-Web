@@ -1,3 +1,5 @@
+import { IoSearchOutline } from "react-icons/io5";
+
 export default function SearchBar({ onSearch }) {
   return (
     <div className="justify-center text-center flex">
@@ -5,23 +7,10 @@ export default function SearchBar({ onSearch }) {
         <input
           type="text"
           placeholder="ፈትዋ ይፈልጉ..."
-          className="bg-[#1c1c1e] text-gray-400 placeholder-gray-400 border border-gray-700 rounded-full py-2 px-4 pl-10 w-64 focus:outline-none focus:border-white"
+          className="bg-[#1c1c1e] text-gray-400 placeholder-gray-400 border border-gray-700 rounded-xl py-2 px-4 pl-10 w-64 focus:outline-none focus:border-white"
           onChange={(e) => onSearch(e.target.value)}
         />
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M21 21l-4.35-4.35m1.1-6.65a7 7 0 11-14 0 7 7 0 0114 0z"
-          />
-        </svg>
+        <IoSearchOutline className="h-5 w-5 text-gray-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
       </div>
     </div>
   );
