@@ -6,7 +6,8 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import MainImage from "../public/detailImages/main.jpg";
 import Image from "next/image";
 import fatwas from "./data/fatwas.json";
-import { SkewLoader } from "react-spinners";
+import lastCommitDate from "../lastCommitDate.json";
+import { CiCalendarDate } from "react-icons/ci";
 
 // const images = [
 //   "/../public/detailImages/main.jpg",
@@ -113,8 +114,9 @@ export default function DetailBody() {
           }}
           className="text-gray-400 mb-4"
         ></p>
-        <div className="flex items-center justify-end text-gray-300">
-          <p>📅 Last updated: 11/4/2024</p>
+        <div className="flex gap-3 items-center justify-end text-gray-300">
+          <CiCalendarDate />
+          <p>Last updated: {lastCommitDate.date}</p>
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ const Combobox = ({ options = [], onSelect }) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="text-gray-400">
-          {selected ? selected : "ፈትዋ ይምረጡ"}
+          {selected ? selected : "ፈትዋ ይምረጡ(አቂዳ)"}
         </span>
         <svg
           xmlns="http://www.w3.org/2000/svg"

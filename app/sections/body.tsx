@@ -7,7 +7,7 @@ import bodyLogo from "../../public/logo3.png";
 
 export default function Body() {
   const options = ["ሁሉም ፈታዋዎች", "አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
-  const [selectedTag, setSelectedTag] = useState(null);
+  const [selectedTag, setSelectedTag] = useState("አቂዳ");
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleTagSelect = (tag) => {
