@@ -1,0 +1,14 @@
+[
+  {
+    id: "",
+    title: "",
+    description: "",
+    question: "",
+    answer: "",
+    source: "",
+    tags: {
+      tags1: ["ጾም"],
+      tags2: ["ሱና"],
+    },
+  },
+];
