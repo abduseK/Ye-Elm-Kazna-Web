@@ -1,4 +1,4 @@
-export default function SearchBar() {
+export default function SearchBar({ onSearch }) {
   return (
     <div className="justify-center text-center flex">
       <div className="relative">
@@ -6,6 +6,7 @@ export default function SearchBar() {
           type="text"
           placeholder="ፈትዋ ይፈልጉ..."
           className="bg-[#1c1c1e] text-gray-400 placeholder-gray-400 border border-gray-700 rounded-full py-2 px-4 pl-10 w-64 focus:outline-none focus:border-white"
+          onChange={(e) => onSearch(e.target.value)}
         />
         <svg
           xmlns="http://www.w3.org/2000/svg"

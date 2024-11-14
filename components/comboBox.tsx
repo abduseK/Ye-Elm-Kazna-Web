@@ -9,6 +9,13 @@ const Combobox = ({ options = [], onSelect }) => {
     option.toLowerCase().includes(query.toLowerCase())
   );
 
+  const handleSelect = (option) => {
+    setSelected(option);
+    setIsOpen(false);
+    setQuery("");
+    onSelect(option);
+  };
+
   return (
     <div className="pl-32 sm:pl-0 relative w-full max-w-xs">
       <button
@@ -48,12 +55,7 @@ const Combobox = ({ options = [], onSelect }) => {
               <button
                 key={index}
                 className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-700 flex items-center"
-                onClick={() => {
-                  setSelected(option);
-                  onSelect(option); // Update the selected tag in Body
-                  setIsOpen(false);
-                  setQuery("");
-                }}
+                onClick={() => handleSelect(option)}
               >
                 {option}
               </button>

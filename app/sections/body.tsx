@@ -6,8 +6,13 @@ import Combobox from "@/components/comboBox";
 import bodyLogo from "../../public/logo3.png";
 
 export default function Body() {
-  const options = ["አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
+  const options = ["ሁሉም ፈታዋዎች", "አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
   const [selectedTag, setSelectedTag] = useState(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleTagSelect = (tag) => {
+    setSelectedTag(tag === "ሁሉም ፈታዋዎች" ? null : tag);
+  };
 
   return (
     <div className="mt-24 justify-center">
@@ -18,10 +23,10 @@ export default function Body() {
         የትኛውም ጉዳይ ላይ ያሎትን ጥያቄ ወይም <br /> ፈትዋ እዚሁ ያግኙ
       </h1>
       <div className="sm:ml-44 mt-10 flex flex-col gap-5 md:flex-row md:justify-center md:gap-5">
-        <SearchBar />
-        <Combobox options={options} onSelect={setSelectedTag} />
+        <SearchBar onSearch={setSearchQuery} />
+        <Combobox options={options} onSelect={handleTagSelect} />
       </div>
-      <FatwaCard selectedTag={selectedTag} />
+      <FatwaCard selectedTag={selectedTag} searchQuery={searchQuery} />
     </div>
   );
 }
