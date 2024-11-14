@@ -37,7 +37,7 @@ export default function DetailBody() {
 
       setFatwa(foundFatwa);
       setLoading(false);
-    }, 2000);
+    }, 500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -45,7 +45,7 @@ export default function DetailBody() {
   if (loading) {
     return (
       <div className="flex justify-center items-center min-h-screen">
-        <SkewLoader color="#FFFFFF" size={30} />
+        <div className="loader border-t-4 border-blue-500 rounded-full w-12 h-12 animate-spin"></div>
       </div>
     );
   }
@@ -81,7 +81,12 @@ export default function DetailBody() {
 
             <div className="flex items-center space-x-2 mb-4">
               <MdSource className="text-xl" />
-              <p className="text-sm text-gray-300"> {fatwa.source}</p>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: fatwa.source.replace(/, /g, "<br />"),
+                }}
+                className="text-sm text-gray-300"
+              ></p>
             </div>
 
             <div className="flex flex-wrap gap-2 mb-4">
@@ -102,7 +107,12 @@ export default function DetailBody() {
           <BsPatchQuestionFill />
           <span>{fatwa.question}</span>
         </h2>
-        <p className="text-gray-400 mb-4">{fatwa.answer}</p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: fatwa.answer.replace(/, /g, "<br /> <br />"),
+          }}
+          className="text-gray-400 mb-4"
+        ></p>
         <div className="flex items-center justify-end text-gray-300">
           <p>📅 Last updated: 11/4/2024</p>
         </div>

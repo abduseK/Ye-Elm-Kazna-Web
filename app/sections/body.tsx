@@ -7,7 +7,7 @@ import { useState } from "react";
 import DetailScreen from "../details/page";
 
 export default function Body() {
-  const options = ["አቂዳ", "ቢድዐ 1", "ቢድዐ 2", "ሶላት 1", "ሶላት 2", "ጾም", "ዒድ"];
+  const options = ["አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
 
   return (
     <div className="mt-24 justify-center">
