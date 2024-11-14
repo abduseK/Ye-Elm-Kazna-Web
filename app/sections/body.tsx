@@ -1,13 +1,13 @@
+import { useState } from "react";
 import Image from "next/image";
 import FatwaCard from "@/components/fatwaCard";
 import SearchBar from "../../components/searchBar";
 import Combobox from "@/components/comboBox";
 import bodyLogo from "../../public/logo3.png";
-import { useState } from "react";
-import DetailScreen from "../details/page";
 
 export default function Body() {
   const options = ["አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
+  const [selectedTag, setSelectedTag] = useState(null);
 
   return (
     <div className="mt-24 justify-center">
@@ -19,9 +19,9 @@ export default function Body() {
       </h1>
       <div className="sm:ml-44 mt-10 flex flex-col gap-5 md:flex-row md:justify-center md:gap-5">
         <SearchBar />
-        <Combobox options={options} />
+        <Combobox options={options} onSelect={setSelectedTag} />
       </div>
-      <FatwaCard />
+      <FatwaCard selectedTag={selectedTag} />
     </div>
   );
 }

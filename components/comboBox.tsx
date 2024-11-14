@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Combobox = ({ options = [] }) => {
+const Combobox = ({ options = [], onSelect }) => {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +11,6 @@ const Combobox = ({ options = [] }) => {
 
   return (
     <div className="pl-32 sm:pl-0 relative w-full max-w-xs">
-      {/* Trigger Button */}
       <button
         className="w-1/2 text-left p-2 border border-gray-700 rounded-lg bg-[#1c1c1e] text-white flex items-center justify-between"
         onClick={() => setIsOpen(!isOpen)}
@@ -35,7 +34,6 @@ const Combobox = ({ options = [] }) => {
         </svg>
       </button>
 
-      {/* Dropdown Menu */}
       {isOpen && (
         <div className="absolute top-14 left-0 w-2/3 bg-[#1c1c1e] border border-gray-700 rounded-lg shadow-lg z-10 p-3">
           <input
@@ -52,6 +50,7 @@ const Combobox = ({ options = [] }) => {
                 className="w-full text-left px-3 py-2 rounded-lg hover:bg-gray-700 flex items-center"
                 onClick={() => {
                   setSelected(option);
+                  onSelect(option); // Update the selected tag in Body
                   setIsOpen(false);
                   setQuery("");
                 }}

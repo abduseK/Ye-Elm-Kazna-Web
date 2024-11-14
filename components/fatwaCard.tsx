@@ -1,10 +1,14 @@
 import Link from "next/link";
 import fatwas from "../app/data/fatwas.json";
 
-export default function FatwaCard() {
+export default function FatwaCard({ selectedTag }) {
+  const filteredFatwas = selectedTag
+    ? fatwas.filter((fatwa) => fatwa.tags.tags1.includes(selectedTag))
+    : fatwas;
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-6 py-12">
-      {fatwas.map((fatwa) => (
+      {filteredFatwas.map((fatwa) => (
         <Link
           href={`/details?id=${fatwa.id}`}
           key={fatwa.id}
