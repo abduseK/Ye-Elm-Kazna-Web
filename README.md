@@ -1,5 +1,2 @@
-![smartmockups_m3mghk6s](https://github.com/user-attachments/assets/5c0fde98-6afa-4760-bf08-148a11a72ebb)
-![smartmockups_m3mggpqc](https://github.com/user-attachments/assets/a1c72f3e-86b6-49d4-8402-0569747fea4b)
-![smartmockups_m3mgfguz](https://github.com/user-attachments/assets/bfda2623-e39f-4a6e-9cde-bea79df1cc17)
-![smartmockups_m3mgdjc2](https://github.com/user-attachments/assets/c6966e37-d7c3-4c36-9736-050a70f646f1)
-![smartmockups_m3mgakpc](https://github.com/user-attachments/assets/232b567a-d37e-4207-8369-f2c60c0d87d0)
+![smartmockups_m3mgfguz](https://github.com/user-attachments/assets/2e9677e4-c52a-4b46-a0cc-cc4eda155eb0)
+![smartmockups_m3mgdjc2](https://github.com/user-attachments/assets/0473cffb-09aa-4737-8822-9663c1b01b39)
