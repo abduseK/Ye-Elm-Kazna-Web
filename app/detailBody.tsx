@@ -36,7 +36,12 @@ export default function DetailBody() {
 
       const foundFatwa = fatwas.find((entry) => entry.id.toString() === id);
 
-      setFatwa(foundFatwa);
+      if (foundFatwa) {
+        setFatwa(foundFatwa);
+      } else {
+        setFatwa(null);
+      }
+
       setLoading(false);
     }, 500);
 
