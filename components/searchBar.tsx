@@ -1,6 +1,10 @@
 import { IoSearchOutline } from "react-icons/io5";
 
-export default function SearchBar({ onSearch }) {
+interface SearchBarProps {
+  onSearch: (query: string) => void;
+}
+
+export default function SearchBar({ onSearch }: SearchBarProps) {
   return (
     <div className="justify-center text-center flex">
       <div className="relative">
