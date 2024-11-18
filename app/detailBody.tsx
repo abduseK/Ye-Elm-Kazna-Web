@@ -20,8 +20,23 @@ import { CiCalendarDate } from "react-icons/ci";
 //   "/../public/detailImages/main8.jpg",
 // ];
 
+// Add an interface for the Fatwa type
+interface Fatwa {
+  id: string;
+  title: string;
+  description: string;
+  question: string;
+  answer: string;
+  source: string;
+  tags: {
+    tags1: string[];
+    tags2: string[];
+  };
+}
+
 export default function DetailBody() {
-  const [fatwa, setFatwa] = useState(null);
+  // Update the state type to be either Fatwa or null
+  const [fatwa, setFatwa] = useState<Fatwa | null>(null);
   const [loading, setLoading] = useState(true);
 
   // const randomIndex = Math.floor(Math.random() * images.length);
