@@ -2,9 +2,17 @@ import Link from "next/link";
 import fatwas from "../app/data/fatwas.json";
 import lastCommitedDate from "../lastCommitDate.json";
 
-export default function FatwaCard({ selectedTag, searchQuery }) {
+interface FatwaCardProps {
+  selectedTag: string | null;
+  searchQuery: string;
+}
+
+export default function FatwaCard({
+  selectedTag,
+  searchQuery,
+}: FatwaCardProps) {
   // Highlighting searched word
-  const highlightText = (text, query) => {
+  const highlightText = (text: string, query: string) => {
     if (!query) return text;
     const regex = new RegExp(`(${query})`, "gi");
     return text.split(regex).map((part, index) =>
