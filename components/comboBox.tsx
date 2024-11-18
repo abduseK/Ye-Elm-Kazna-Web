@@ -8,14 +8,14 @@ interface ComboboxProps {
 
 export default function Combobox({ options, onSelect }: ComboboxProps) {
   const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState(null);
+  const [selected, setSelected] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
 
   const filteredOptions = options.filter((option) =>
     option.toLowerCase().includes(query.toLowerCase())
   );
   const handleSelect = (option: string) => {
-    setSelected(option as any); // Type assertion to fix type mismatch
+    setSelected(option);
     setIsOpen(false);
     setQuery("");
     onSelect(option);
