@@ -6,7 +6,7 @@ import Combobox from "@/components/comboBox";
 import bodyLogo from "../../public/logo3.png";
 
 export default function Body() {
-  const options = ["ሁሉም ፈታዋዎች", "አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
+  const options: string[] = ["ሁሉም ፈታዋዎች", "አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
@@ -24,7 +24,7 @@ export default function Body() {
       </h1>
       <div className="mt-10 flex flex-col gap-5 md:flex-row md:justify-center">
         <SearchBar onSearch={setSearchQuery} />
-        <Combobox options={options} onSelect={handleTagSelect} />
+        <Combobox options={options as string[]} onSelect={handleTagSelect} />
       </div>
       <FatwaCard selectedTag={selectedTag} searchQuery={searchQuery} />
     </div>

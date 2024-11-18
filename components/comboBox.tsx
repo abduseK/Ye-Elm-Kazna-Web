@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { FaArrowDownWideShort } from "react-icons/fa6";
 
-const Combobox = ({ options = [], onSelect }) => {
+interface ComboboxProps {
+  options: string[];
+  onSelect: (value: string) => void;
+}
+
+export default function Combobox({ options, onSelect }: ComboboxProps) {
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
@@ -9,9 +14,8 @@ const Combobox = ({ options = [], onSelect }) => {
   const filteredOptions = options.filter((option) =>
     option.toLowerCase().includes(query.toLowerCase())
   );
-
-  const handleSelect = (option) => {
-    setSelected(option);
+  const handleSelect = (option: string) => {
+    setSelected(option as any); // Type assertion to fix type mismatch
     setIsOpen(false);
     setQuery("");
     onSelect(option);
@@ -53,6 +57,4 @@ const Combobox = ({ options = [], onSelect }) => {
       )}
     </div>
   );
-};
-
-export default Combobox;
+}
