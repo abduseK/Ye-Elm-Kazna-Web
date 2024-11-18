@@ -7,10 +7,10 @@ import bodyLogo from "../../public/logo3.png";
 
 export default function Body() {
   const options = ["ሁሉም ፈታዋዎች", "አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
-  const [selectedTag, setSelectedTag] = useState(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-  const handleTagSelect = (tag) => {
+  const handleTagSelect = (tag: string) => {
     setSelectedTag(tag === "ሁሉም ፈታዋዎች" ? null : tag);
   };
 
