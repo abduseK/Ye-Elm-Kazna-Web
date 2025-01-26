@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import FatwaCard from "@/components/fatwaCard";
-import SearchBar from "../../components/searchBar";
+
 import {
   Select,
   SelectContent,
