@@ -4,7 +4,7 @@ export default function NavBar() {
   return (
     <div>
       <div className="flex justify-between items-center py-4">
-        <h1 className="text-3xl font-bold text-white">خزينة العلم</h1>
+        <h1 className="text-3xl font-bold text-white"></h1>
         <div className="flex gap-2 sm:gap-5 justify-center items-center">
           <select
             className="bg-[#15141a] text-gray-300 border border-gray-700 rounded-md px-1 sm:px-2 py-1 text-sm sm:text-base focus:outline-none"
