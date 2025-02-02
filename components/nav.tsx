@@ -1,7 +1,7 @@
 "use client";
 // import ThemeToggler from "./toggle-icon";
 import Image from "next/image";
-import GitIcon from "../public/github.svg";
+import GitIcon from "../public/github2.png";
 
 export default function NavBar() {
   return (
@@ -22,7 +22,13 @@ export default function NavBar() {
               )
             }
           >
-            <Image src={GitIcon} alt="GitHub" width={20} height={20} />
+            <Image
+              src={GitIcon}
+              alt="GitHub"
+              width={20}
+              height={20}
+              // style={{ fill: "white" }}
+            />
             <span className="ml-2">Star</span>
           </button>
         </div>
