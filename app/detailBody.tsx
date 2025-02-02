@@ -6,7 +6,6 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import MainImage from "../public/detailImages/main.jpg";
 import Image from "next/image";
 import fatwas from "./data/fatwas.json";
-import lastCommitDate from "../lastCommitDate.json";
 import { CiCalendarDate } from "react-icons/ci";
 
 // const images = [
@@ -136,7 +135,7 @@ export default function DetailBody() {
         ></p>
         <div className="flex gap-3 items-center justify-end text-gray-300">
           <CiCalendarDate />
-          <p>Last updated: {lastCommitDate.date}</p>
+          <p>Last updated: January 29, 2025</p>
         </div>
       </div>
     </div>
