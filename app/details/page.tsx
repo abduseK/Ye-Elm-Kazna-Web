@@ -1,12 +1,14 @@
-import NavBar from "@/components/nav";
-import DetailBody from "@/app/detailBody";
+import NavBar from "@/app/sections/nav";
+import DetailBody from "../detailBody";
 
 export default function DetailScreen() {
   return (
-    <div className="text-white min-h-screen flex flex-col px-14 custom-bg md:px-64">
-      <NavBar />
-      <div className="no-scrollbar flex-grow mt-8 overflow-y-auto">
-        <DetailBody />
+    <div>
+      <div className="pt-5 pr-5 text-white min-h-screen flex flex-col custom-bg">
+        <NavBar />
+        <div className="no-scrollbar flex-grow mt-8 overflow-y-auto">
+          <DetailBody />
+        </div>
       </div>
     </div>
   );

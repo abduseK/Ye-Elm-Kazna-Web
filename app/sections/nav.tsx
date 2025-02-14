@@ -1,7 +1,7 @@
 "use client";
 // import ThemeToggler from "./toggle-icon";
 import Image from "next/image";
-import GitIcon from "../public/github2.png";
+import GitIcon from "../../public/github2.png";
 
 export default function NavBar() {
   return (

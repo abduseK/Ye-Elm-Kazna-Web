@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="pb-8 pt-28 text-center justify-center">
+    <div className="pb-1 pt-28 text-center justify-center">
       <p className="text-gray-400 sm:mb-1 mb-3">
         If you have any suggestions or notice any mistakes in these Fatwas,
         please contact me.

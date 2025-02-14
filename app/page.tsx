@@ -1,12 +1,12 @@
 "use client";
 
-import Body from "@/app/sections/body";
-import NavBar from "@/components/nav";
+import NavBar from "@/app/sections/nav";
 import Footer from "./sections/footer";
+import Body from "./sections/body";
 
 export default function Home() {
   return (
-    <div className="text-white min-h-screen custom-bg md:px-52 ">
+    <div className="text-white min-h-screen custom-bg ">
       <div className="scrollable-content no-scrollbar">
         <NavBar />
         <Body />
