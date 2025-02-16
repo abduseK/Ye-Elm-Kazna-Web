@@ -12,7 +12,17 @@ import { useState } from "react";
 import FatwaCard from "@/components/fatwaCard";
 
 export default function Body() {
-  const options: string[] = ["ሁሉም ፈታዋዎች", "አቂዳ", "ቢድዐ", "ሶላት", "ጾም", "ዒድ"];
+  const options: string[] = [
+    "ሁሉም ፈታዋዎች",
+    "አቂዳ",
+    "ቢድዐ",
+    "ሶላት",
+    "ጾም",
+    "ዒድ",
+    "ሴቶች",
+    "ዶዒፍ",
+    "ጁማ",
+  ];
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
