@@ -30,6 +30,9 @@ interface Fatwa {
   tags: {
     tags1: string[];
     tags2: string[];
+    tags3?: string[];
+    tags4?: string[];
+    tags5?: string[];
   };
 }
 
@@ -116,6 +119,11 @@ export default function DetailBody() {
               <span className="bg-gray-700 text-xs px-3 py-1 rounded-full">
                 {fatwa.tags["tags2"]}
               </span>
+              {fatwa.tags.tags3 && fatwa.tags.tags3.length > 0 && (
+                <span className="bg-gray-700 text-xs px-3 py-1 rounded-full">
+                  {fatwa.tags["tags3"]}
+                </span>
+              )}
             </div>
           </div>
         </div>
