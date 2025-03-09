@@ -143,7 +143,7 @@ export default function DetailBody() {
         ></p>
         <div className="flex gap-3 items-center justify-end text-gray-300">
           <CiCalendarDate />
-          <p>Last updated: January 29, 2025</p>
+          <p>Last updated: February 23, 2025</p>
         </div>
       </div>
     </div>
