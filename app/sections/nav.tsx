@@ -14,7 +14,7 @@ export default function NavBar() {
             className="bg-white text-black py-1 sm:py-2 px-3 sm:px-5 rounded-full text-sm sm:text-base whitespace-nowrap"
             onClick={() =>
               window.open(
-                "https://github.com/abduseK/Ye-Elm-Kazna/releases/tag/v1.0.0",
+                "https://github.com/abduseK/Ye-Elm-Kazna/releases/tag/v2.0.0",
                 "_blank"
               )
             }
