@@ -22,7 +22,7 @@ export default function Footer() {
           href="https://abdelselamk.vercel.app"
           target="_"
         >
-          <span className="underline text-green-600">Abdulselam K.</span>
+          <span className="underline text-purple-500">Abdulselam K.</span>
         </a>
       </p>
     </div>
