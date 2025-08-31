@@ -54,7 +54,15 @@ export default function DetailBody() {
       const foundFatwa = fatwas.find((entry) => entry.id.toString() === id);
 
       if (foundFatwa) {
-        setFatwa(foundFatwa);
+        // Ensure all required tag arrays are present
+        setFatwa({
+          ...foundFatwa,
+          tags: {
+            tags1: foundFatwa.tags.tags1 ?? [],
+            tags2: foundFatwa.tags.tags2 ?? [],
+            tags3: foundFatwa.tags.tags3 ?? [],
+          },
+        });
       } else {
         setFatwa(null);
       }
@@ -133,7 +141,11 @@ export default function DetailBody() {
       <div className="max-w-3xl w-full bg-[#1c1c1e] rounded-lg shadow-lg p-6">
         <h2 className="text-xl font-semibold mb-4 flex items-center space-x-2">
           <BsPatchQuestionFill />
-          <span>{fatwa.question}</span>
+          <span
+            dangerouslySetInnerHTML={{
+              __html: fatwa.question.replace(/, /g, "<br /> <br />"),
+            }}
+          ></span>
         </h2>
         <p
           dangerouslySetInnerHTML={{
@@ -143,7 +155,7 @@ export default function DetailBody() {
         ></p>
         <div className="flex gap-3 items-center justify-end text-gray-300">
           <CiCalendarDate />
-          <p>Last updated: February 23, 2025</p>
+          <p>Last updated: August 23, 2025</p>
         </div>
       </div>
     </div>
