@@ -7,6 +7,7 @@ import MainImage from "../public/detailImages/main.jpg";
 import Image from "next/image";
 import fatwas from "./data/fatwas.json";
 import { CiCalendarDate } from "react-icons/ci";
+import Footer from "./sections/footer";
 
 // const images = [
 //   "/../public/detailImages/main.jpg",
@@ -158,6 +159,7 @@ export default function DetailBody() {
           <p>Last updated: August 31, 2025</p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
