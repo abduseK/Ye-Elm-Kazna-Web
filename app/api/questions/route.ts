@@ -1,52 +1,39 @@
 import { NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 
-import fs from "fs";
-import path from "path";
-
-const dataDir = path.join(process.cwd(), "data");
-const filePath = path.join(dataDir, "questions.json");
+// Create Supabase client
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
 
 export async function POST(request: Request) {
-  // Parse the request body
   try {
-    const body = await request.json();
-    const { category, questions } = body;
+    const { category, question } = await request.json();
 
-    if (!category || !questions) {
+    if (!category || !question) {
       return NextResponse.json(
-        { error: "Both fields are required." },
+        { error: "Both fields are required" },
         { status: 400 }
       );
     }
 
-    if (!fs.existsSync(dataDir)) {
-      fs.mkdirSync(dataDir, { recursive: true });
+    const { data, error } = await supabase
+      .from("fatwa-questions")
+      .insert([{ category, question }]);
+
+    if (error) {
+      console.error(error);
+      return NextResponse.json({ error: error.message }, { status: 500 });
     }
-
-    const fileData = fs.existsSync(filePath)
-      ? JSON.parse(fs.readFileSync(filePath, "utf-8"))
-      : [];
-
-    fileData.push({
-      id: Date.now(),
-      category,
-      questions,
-      createdAt: new Date().toISOString,
-    });
-
-    fs.writeFileSync(filePath, JSON.stringify(fileData, null, 2));
 
     return NextResponse.json({
       success: true,
-      message: "Question added successfully",
+      message: "Question saved successfully!",
+      data,
     });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json(
-      {
-        error: "Failed to save the question",
-      },
-      { status: 500 }
-    );
+  } catch (err) {
+    console.error(err);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

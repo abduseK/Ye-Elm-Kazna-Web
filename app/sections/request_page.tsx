@@ -6,33 +6,30 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 export default function RequestPage() {
   const [category, setCategory] = useState("");
   const [question, setQuestion] = useState("");
-  const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     // Handle submission logic here
 
-    setMessage("");
     setLoading(true);
     const res = await fetch("api/questions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ category, questions: question }),
+      body: JSON.stringify({ category, question }),
     });
 
     const data = await res.json();
 
     if (data.success) {
       setTimeout(() => {
-        setMessage("ጥያቄዎ ተልኳል፣ እናመሰግናለን!");
         setCategory("");
         setQuestion("");
         setLoading(false);
         alert("ጥያቄዎ ተልኳል፣ እናመሰግናለን!");
       }, 1500);
     } else {
-      setMessage("ይቅርታ፣ ጥያቄዎ ሊልክ አልቻለም። እባክዎ ደግመው ይሞክሩ።");
+      alert("ይቅርታ፣ ጥያቄዎ ሊልክ አልቻለም። እባክዎ ደግመው ይሞክሩ።");
     }
   };
 
@@ -87,7 +84,7 @@ export default function RequestPage() {
           )}
         </button>
       </form>
-      {message && <p className="mt-4 text-center">{message}</p>}
+      {/* {message && <p className="mt-4 bg-white text-center">{message}</p>} */}
       {/* Spinner styles */}
       <style jsx>{`
         .loader {
