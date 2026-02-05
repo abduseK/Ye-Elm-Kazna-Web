@@ -4,7 +4,7 @@ import { createClient } from "@supabase/supabase-js";
 // Create Supabase client
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
+  process.env.SUPABASE_SERVICE_ROLE_KEY!,
 );
 
 export async function POST(request: Request) {
@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     if (!category || !question) {
       return NextResponse.json(
         { error: "Both fields are required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
