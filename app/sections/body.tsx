@@ -12,19 +12,21 @@ import { useState } from "react";
 import FatwaCard from "@/components/fatwaCard";
 // import RequestPage from "../request/page";
 import Link from "next/link";
+import { myCustomFont } from "../fonts";
 
 export default function Body() {
-  const options: string[] = [
-    "ሁሉም ፈታዋዎች",
-    "አቂዳ",
-    "ቢድዐ",
-    "ሶላት",
-    "ረመዳን",
-    "ዒድ",
-    "ሴቶች",
-    "ዶዒፍ",
-    "ጁማ",
-  ];
+  const options: string[] = ["ሁሉም ፈታዋዎች", "አቂዳ", "ረመዳን", "ዒድ", "ዶዒፍ", "ጁማ"];
+  // const options: string[] = [
+  //   "ሁሉም ፈታዋዎች",
+  //   "አቂዳ",
+  //   "ቢድዐ",
+  //   "ሶላት",
+  //   "ረመዳን",
+  //   "ዒድ",
+  //   "ሴቶች",
+  //   "ዶዒፍ",
+  //   "ጁማ",
+  // ];
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   // const [showComingSoon, setShowComingSoon] = useState(false);
@@ -34,7 +36,7 @@ export default function Body() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative mt-36">
       <Link href="/request">
         <button
           className="fixed bottom-8 right-8 z-50 bg-white text-black px-6 py-3 rounded-full shadow-lg hover:bg-gray-300 transition-all flex items-center gap-2"
@@ -52,7 +54,7 @@ export default function Body() {
         <div className="flex justify-center">
           <Image src={bodyLogo} alt="" height={70} width={200}></Image>
         </div>
-        <h1 className="text-3xl md:text-5xl">
+        <h1 className={`${myCustomFont.className} text-3xl md:text-5xl`}>
           የትኛውም ጉዳይ ላይ ያሎትን ጥያቄ ወይም <br /> ፈትዋ እዚሁ ያግኙ
         </h1>
         <div className="mt-10 flex flex-col gap-5 md:flex-row items-center justify-center">
