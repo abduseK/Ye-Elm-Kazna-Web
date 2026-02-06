@@ -30,7 +30,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "የ ዒልም ካዝና",
   description:
-    "የዒልም ካዝና በዕለት ተዕለት ሕይወታችን ለሚገጥሙን ሃይማኖታዊ ጥያቄዎች አስተማማኝ እና ፈጣን ምላሾችን በአንድ ጣራ ስር የያዘ ዲጂታል መድረክ ነው። ይህ ፕሮጀክት በተለያዩ የሕይወት ዘርፎች—ከአምልኮ እስከ ማህበራዊ ግንኙነት—ያሉ ኢስላማዊ የሕግ ውሳኔዎችን (ፈታዋዎችን) በቀላሉ ተደራሽ ለማድረግ ታስቦ የተዘጋጀ የዕውቀት ማከማቻ ነው።",
+    "A comprehensive collection of Islamic fatwas in Amharic, covering various topics and questions related to Islamic jurisprudence. Explore our extensive database of fatwas to find answers to your religious inquiries and gain insights into Islamic teachings.",
 };
 
 export default function RootLayout({
