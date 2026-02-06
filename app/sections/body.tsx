@@ -39,13 +39,13 @@ export default function Body() {
     <div className="relative mt-36">
       <Link href="/request">
         <button
-          className="fixed bottom-8 right-8 z-50 bg-white text-black px-6 py-3 rounded-full shadow-lg hover:bg-gray-300 transition-all flex items-center gap-2"
+          className="fixed bottom-8 right-8 z-50 bg-white text-black shadow-lg hover:bg-gray-300 transition-all flex items-center justify-center gap-2 w-14 h-14 rounded-full sm:w-auto sm:h-auto sm:px-6 sm:py-3"
           // onClick={() => setShowComingSoon(true)}
         >
           <span role="img" aria-label="AI">
             🙋🏿‍♂️
           </span>{" "}
-          ፈትዋ ጥያቄ ይላኩ
+          <span className="hidden sm:flex"> ፈትዋ ጥያቄ ይላኩ</span>
         </button>
       </Link>
       {/* Main Content or Coming Soon */}
