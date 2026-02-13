@@ -6,25 +6,25 @@ export default function NavBar() {
       <div className="flex justify-center items-center py-6 max-w-7xl mx-auto">
         {/* Premium Centered Button */}
         <a
-          href="https://github.com/abduseK/Ye-Elm-Kazna/releases/tag/v1.0.0"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/downloads/yeelmkazna.apk"
+          download="Ye-Elm-Kazna.apk" // This renames the file for the user on save
           className="
     inline-flex items-center justify-center 
     px-8 py-3 
     font-bold text-black 
     bg-white border border-gray-300 rounded-full
-    transition-colors duration-200
-    hover:bg-gray-300
-    active:bg-gray-100
-    focus:outline-none focus:ring-2 focus:ring-gray-200
+    transition-all duration-200
+    hover:bg-gray-50 hover:border-gray-400
+    active:bg-gray-100 active:scale-95
+    focus:outline-none focus:ring-2 focus:ring-blue-500
     no-underline
   "
         >
           <span className="flex items-center gap-2 tracking-wide text-sm sm:text-base">
-            መተግበሪያውን ያውርዱ
+            መተግበሪያውን ያውርዱ (20MB)
+            {/* Download Icon */}
             <svg
-              className="w-4 h-4"
+              className="w-5 h-5"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -32,8 +32,8 @@ export default function NavBar() {
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth={2.5}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
+                strokeWidth={2}
+                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
               />
             </svg>
           </span>
