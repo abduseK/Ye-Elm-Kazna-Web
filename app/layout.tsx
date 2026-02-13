@@ -30,7 +30,7 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "የ ዒልም ካዝና",
   description:
-    "A comprehensive collection of Islamic fatwas in Amharic, covering various topics and questions related to Islamic jurisprudence. Explore our extensive database of fatwas to find answers to your religious inquiries and gain insights into Islamic teachings.",
+    "A comprehensive collection of Islamic fatwas in Amharic, covering various topics and questions related to Islamic jurisprudence.",
 };
 
 export default function RootLayout({
